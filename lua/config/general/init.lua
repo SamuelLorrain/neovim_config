@@ -1,0 +1,29 @@
+-- config vim
+vim.o.modeline = false
+vim.o.hidden = false
+vim.o.writebackup = true
+vim.o.relativenumber = true
+vim.o.number = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = vim.o.tabstop
+vim.o.expandtab = true
+vim.o.showcmd = true
+vim.o.autoread = true
+vim.o.scrolloff = 5
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.incsearch = true
+vim.o.hlsearch = true
+vim.g.mapleader=","
+vim.g.maplocalleader=";"
+vim.cmd [[set undofile]]
+vim.o.updatetime = 250
+vim.o.signcolumn = 'yes'
+vim.o.virtualedit = 'block'
+vim.o.mouse = ''
+vim.o.title = true
+vim.o.wrap = false
+vim.o.fixendofline = false
+vim.o.foldenable= false
+vim.o.foldlevel = 99
+-- vim.o.inccommand = 'nosplit'
