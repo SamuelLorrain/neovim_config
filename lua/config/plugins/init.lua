@@ -21,9 +21,8 @@ require('packer').startup(function()
     use { 'williamboman/nvim-lsp-installer' }
     use { 'hrsh7th/nvim-cmp' }
     use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'L3MON4D3/LuaSnip' }
-    use { 'saadparwaiz1/cmp_luasnip' }
-    use { 'RishabhRD/nvim-lsputils', requires = {{'RishabhRD/popfix'}} }
+    use { 'saadparwaiz1/cmp_luasnip', requires={{ 'L3MON4D3/LuaSnip' }} }
+    -- use { 'RishabhRD/nvim-lsputils', requires = {{'RishabhRD/popfix'}} }
 
     -- add-ons
     use { 'vimwiki/vimwiki', branch = 'dev'} -- ,ww
@@ -70,6 +69,8 @@ require('packer').startup(function()
     -- languages
     use 'editorconfig/editorconfig-vim'
     use 'windwp/nvim-ts-autotag' -- html auto close tags
+    use 'mhartington/formatter.nvim'
+    use 'sbdchd/neoformat'
     -- use 'tools-life/taskwiki'
 end)
 

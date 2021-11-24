@@ -21,3 +21,38 @@ require('project_nvim').setup({
 })
 
 require('lualine').setup()
+
+-- neoformat
+vim.api.nvim_exec([[
+let g:neoformat_phpcbf = {
+    \ 'exe': 'phpcbf',
+    \ 'args': ['--standard=PSR12', '-'],
+    \ 'stdin': 1,
+    \ 'valid_exit_codes': [0,1]
+    \ }
+
+let g:neoformat_enabled_php = ['phpcbf']
+
+augroup neofmt
+    autocmd!
+    autocmd BufWritePre *.php Neoformat
+augroup END
+]], false)
+
+
+-- formatter.nvim seem to not works properly
+require'formatter'.setup {
+    filetype = {
+        php = {
+            function()
+                return {
+                    exe = "phpcbf",
+                    args = {"--standard=PSR12", "-"},
+                    stdin = false
+                }
+            end
+        }
+    },
+    logging = true
+}
+
