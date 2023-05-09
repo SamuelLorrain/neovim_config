@@ -14,5 +14,3 @@ require'config.plugins.treesitter'
 -- complex setup
 require'config.plugins.smalls'
 
-
-

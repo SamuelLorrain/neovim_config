@@ -31,7 +31,7 @@ end
 -- lsp installer
 local lsp_installer = require('nvim-lsp-installer')
 -- required for cmp with lsp
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
         vim.lsp.protocol.make_client_capabilities()
     )
 

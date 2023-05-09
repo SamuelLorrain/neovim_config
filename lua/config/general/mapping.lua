@@ -1,7 +1,7 @@
 -- config mappings
-vim.api.nvim_set_keymap('i','<leader><leader>','<Esc>', { noremap = true })
 -- vim.api.nvim_set_keymap('n','<leader>ev',':vsplit $MYVIMRC<Cr>', { noremap = true })
-vim.api.nvim_set_keymap('n','<leader>sv',':source $MYVIMRC<Cr>', { noremap = true })
+-- vim.api.nvim_set_keymap('n','<leader>sv',':source $MYVIMRC<Cr>', { noremap = true })
+vim.api.nvim_set_keymap('i','<leader><leader>','<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('t','<Esc>', '<C-\\><C-n>', { noremap = true })
 
 -- disable annoying commands
@@ -17,7 +17,7 @@ vim.api.nvim_set_keymap('n',
 
 vim.api.nvim_set_keymap(
     'n',
-    '<leader>blam',
+    '<leader>blm',
     [[<cmd>GitBlameToggle<CR>kj]],
     { noremap = true, silent = false })
 
