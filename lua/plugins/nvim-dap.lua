@@ -25,6 +25,7 @@ return {
         vim.keymap.set('n', '<Leader>dc', function() dap.continue() end)
 
         -- TODO on doit pouvoir choper celle de Mason ?
-        require('dap-python').setup('~/.virtualenvs/debugpy/bin/python') -- link a to venv containing debugpy
+        local debugpy_path = require('mason-registry').get_package('debugpy'):get_install_path()
+        require('dap-python').setup(debugpy_path .. '/venv/bin/python') -- link a to venv containing debugpy
     end,
 }
