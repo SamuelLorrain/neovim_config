@@ -12,5 +12,7 @@ return {
         -- create some custom commands
         vim.api.nvim_create_user_command('Gpf', 'Git push --force', {})
         vim.api.nvim_create_user_command('Gp', 'Git push', {})
+        vim.api.nvim_create_user_command('Gcan', 'Git commit --amend --no-edit', {})
+
     end
 }
