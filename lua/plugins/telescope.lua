@@ -15,7 +15,7 @@ return {
             defaut = {
                 color_devicons = true,
                 prompt_prefix = '> ',
-                path_display = {"truncate", "shorten"},
+                path_display = {"smart"},
             },
             extensions = {
                 fzf = {
