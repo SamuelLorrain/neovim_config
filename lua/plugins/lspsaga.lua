@@ -11,6 +11,7 @@ return {
                 enable = false
             },
             lightbulb = {
+                enable = false,
                 sign = false,
                 enable_in_insert = false
             },
