@@ -9,6 +9,9 @@ vim.keymap.set('','ZQ','<Nop>', { noremap = true })
 -- <esc> to leave terminal
 vim.keymap.set('t','<Esc>', '<C-\\><C-n>', { noremap = true })
 
+vim.keymap.set('n','j', 'gj', { noremap = true })
+vim.keymap.set('n','k', 'gk', { noremap = true })
+
 -- open explorer to the config folder
 vim.keymap.set(
 'n',
@@ -40,8 +43,7 @@ vim.keymap.set('n',
 vim.keymap.set(
     'n',
     '<leader>RUNS',
-    [[<Cmd>tabnew<CR><Cmd>terminal<CR>acd ~/Developer/simulation && venva && cd src/ && runserver<CR>
-<Cmd>split<CR><Cmd>terminal<CR>cd ~/Developer/learning && venva && runserver<CR>
-<Cmd>vsplit<CR><Cmd>terminal<CR>BROWSER=none cd ~/Developer/frontend && runserver<CR>
+    [[<Cmd>tabnew<CR><Cmd>terminal<CR>acd ~/Developer/backend && venva && runserver<CR>
+<Cmd>vsplit<CR><Cmd>terminal<CR>cd ~/Developer/api && venva && runserver<CR>
 <Cmd>tabprevious<CR>]],
     { noremap = true, silent = false })
