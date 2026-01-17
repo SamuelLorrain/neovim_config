@@ -48,19 +48,10 @@ return {
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
             end,
         })
-
-        local lspconfig = require('lspconfig')
-        -- lspconfig.pylsp.setup({})
-        lspconfig.pyright.setup({})
-        lspconfig.lua_ls.setup({
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = {'vim'}
-                    }
-                }
-            }
-        })
-        lspconfig.tsserver.setup{}
+        vim.lsp.enable('ts_lsp')
+        vim.lsp.enable('pyright')
+        vim.lsp.enable('lua_ls')
+        vim.lsp.enable('tsserver')
+        vim.lsp.enable('rust_analyzer')
     end
 }
