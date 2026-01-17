@@ -23,5 +23,6 @@ vim.opt.termguicolors = true
 vim.opt.mouse = ''
 
 vim.g.mapleader = ','
+vim.g.maplocalleader = ';'
 
 vim.o.winblend = 0
