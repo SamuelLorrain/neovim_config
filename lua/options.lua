@@ -20,7 +20,7 @@ vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
-vim.opt.mouse = ''
+-- vim.opt.mouse = ''
 
 vim.g.mapleader = ','
 

@@ -62,5 +62,6 @@ return {
             }
         })
         lspconfig.tsserver.setup{}
+        lspconfig.terraform_ls.setup{}
     end
 }
