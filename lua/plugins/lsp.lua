@@ -49,10 +49,8 @@ return {
             end,
         })
 
-        local lspconfig = require('lspconfig')
-        -- lspconfig.pylsp.setup({})
-        lspconfig.pyright.setup({})
-        lspconfig.lua_ls.setup({
+        vim.lsp.enable('pyright')
+        vim.lsp.config('lua_ls', {
             settings = {
                 Lua = {
                     diagnostics = {
@@ -61,7 +59,7 @@ return {
                 }
             }
         })
-        lspconfig.tsserver.setup{}
-        lspconfig.terraform_ls.setup{}
+        vim.lsp.enable('lua_ls')
+        vim.lsp.enable('terraform_ls')
     end
 }
