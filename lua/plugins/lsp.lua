@@ -16,7 +16,6 @@ return {
         }
     },
     config = function()
-        local capabilities = require('cmp_nvim_lsp').default_capabilities
         -- Global mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
         vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
@@ -30,7 +29,6 @@ return {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
             callback = function(ev)
                 -- Buffer local mappings.
-                -- See `:help vim.lsp.*` for documentation on any of the below functions
                 local opts = { buffer = ev.buf }
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
