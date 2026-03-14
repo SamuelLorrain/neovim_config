@@ -26,3 +26,6 @@ vim.g.maplocalleader = ';'
 vim.g.mapleader = ','
 
 vim.o.winblend = 0
+
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'vim.treesitter#foldexpr()'
