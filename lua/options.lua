@@ -29,3 +29,4 @@ vim.o.winblend = 0
 
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'vim.treesitter#foldexpr()'
+vim.opt.foldlevel = 99
