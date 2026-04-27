@@ -23,5 +23,5 @@ vim.keymap.set('n', '<leader>TT', open_term_in_new_tab .. "<CR>a")
 local open_3_terms_in_new_tab = [[<cmd>tabnew<CR><Cmd>terminal<CR><Cmd>split<CR><Cmd>terminal<CR><Cmd>vsplit<CR><Cmd>terminal<CR>]]
 vim.keymap.set('n', '<leader>3TT', open_3_terms_in_new_tab)
 
-local run_server = [[<Cmd>tabnew<CR><Cmd>terminal<CR>acd ~/Developer/backend && venva && runserver<CR><Cmd>vsplit<CR><Cmd>terminal<CR>cd ~/Developer/api && venva && runserver<CR><Cmd>tabprevious<CR>]]
+local run_server = [[<Cmd>tabnew<CR><Cmd>terminal<CR><Cmd>file backend-term<CR>acd ~/Developer/backend && venva && runserver<CR><Cmd>vsplit<CR><Cmd>terminal<CR><Cmd>file api-term<CR>cd ~/Developer/api && venva && runserver<CR><Cmd>split<CR><Cmd>terminal<CR><Cmd>file front-term<CR>cd ~/Developer/platform && npm run preinstall && npm run dev<CR><Cmd>tabprevious<CR>]]
 vim.keymap.set('n', '<leader>RUNS', run_server)
